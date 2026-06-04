@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { exportPDF } from "@/lib/pdfExporter";
-import { buildResumeHTML } from "@/lib/buildResume";
+import { exportPDF } from "@/app/lib/pdfExporter";
+import { buildResumeHTML } from "@/app/lib/buildResume";
 
 // export async function POST() {
 //     try {

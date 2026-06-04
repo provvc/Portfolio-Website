@@ -179,12 +179,11 @@ a {
                     <div class="row-gap-1">
                       <div class="text-8 font-bold">${project.name}</div>
                       <div class="text-8">|</div>
-                      <div class="text-8 font-bold">${project.projectContext}</div>
+                      <div class="text-8 font-bold">${project.context}</div>
                     </div>
-                    <div class="text-7 mb-1">${project.description}</div>
                     <div class="text-7 mb-1">${project.learningOutcome}</div>
-                    <div class="text-7 mb-1"><span class="font-bold">Project Stack:</span> ${project.projectStack}</div>
-                    <div class="text-7 mb-1"><a href=${project.contributionLink} target="_blank">My Contribution Github Repo</a></div>
+                    <div class="text-7 mb-1"><span class="font-bold">Project Stack:</span> ${project.stack}</div>
+                    <div class="text-7 mb-1"><a href=${project.link} target="_blank">My Contribution Github Repo</a></div>
                 </div>
               `).join("")}
             </div>
