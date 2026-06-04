@@ -9,13 +9,14 @@ export const resumeInfo = {
     summary: "Recent Computer Science graduate seeking employment opportunity in technical or non-technical roles to apply my academic experience within a professional environment and gain valuable work experience.",
     experience: [
         {
-            company: "DEPARTMENT OF NATIONAL DEFENSE",
+            company: "DEPARTMENT OF NATIONAL DEFENCE",
             location: "Nepean, ON",
             title: "IT Technician",
+            type: "Student CO-OP Employment",
             address: "60 Moodie Dr, Nepean, ON K2H 8G1",
             dates: "May 2023 - August 2023",
             description: [
-                { task: "Provided on-site technical support to civilian and military personnel within my designated department facility adn other military sites." },
+                { task: "Provided on-site technical support to civilian and military personnel within my designated department facility and other military sites." },
                 { task: "Imaged and reimaged laptops for redistribution within the department, ensuring compliance with departmental IT standards." },
                 { task: "Managed serviceable laptop inventory, ensuring adequate inventory levels to support onboarding operations." },
                 { task: "Coordinated and scheduled technical support visits on the behalf of the technical support team for civilian and military clients." },
@@ -28,6 +29,10 @@ export const resumeInfo = {
             institution: "CEGEP Heritage College",
             location: "Gatineau, QC",
             degree: "DEC in Computer Science",
+            awards: [
+                { awardName: "Dean's Honour Roll Recepient", awardDescription: "Academic recognition awarded to students with a 90+ average." },
+                { awardName: "Honour Roll Recepient", awardDescription: "Academic recognition awarded to students with an 80-89 average." }
+            ],
             dates: "August 2022 - May 2026",
         },
         {

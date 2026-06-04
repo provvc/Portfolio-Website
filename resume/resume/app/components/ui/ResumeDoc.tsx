@@ -1,6 +1,7 @@
 "use client";
 
 import { resumeInfo } from "@/app/lib/resumeInfo";
+import { resume } from "react-dom/server";
 
 export function ResumeDoc() {
     return (
@@ -28,7 +29,9 @@ export function ResumeDoc() {
                 <div className="row-gap-1 font-extrabold">
                   <div className="text-sm mr-2">{job.company}</div>
                   <div className="text-sm">|</div>
-                  <div className="text-sm ml-2">{job.title}</div>
+                  <div className="text-sm ml-2 mr-2">{job.title}</div>
+                  <div className="text-sm">|</div>
+                  <div className="text-sm ml-2">{job.type}</div>
                 </div>
 
                 <div>
@@ -42,7 +45,7 @@ export function ResumeDoc() {
                 ))}
 
                 <div className="mt-2">
-                  <div className="text-xs">{job.dates}</div>
+                  <div className="text-md">{job.dates}</div>
                 </div>
               </div>
             ))}
@@ -50,30 +53,36 @@ export function ResumeDoc() {
 
           {/* EDUCATION */}
           <div className="section">
-            <div className="text-2xl mb-2 mt-8">Education</div>
-
+            <div className="text-2xl mt-8">Education</div>
+            <div className="mt-2">
             {resumeInfo.education.map((school) => (
-              <div className="mb-2">
+              <div className="my-4">
                 <div className="row-gap-1 font-extrabold">
-                  <div className="text-sm mr-2">{school.institution}</div>
+                  <div className="text-sm">{school.institution},</div>
+                  <div className="text-sm mr-2">{school.location}</div>
                   <div className="text-sm">|</div>
                   <div className="text-sm ml-2">{school.degree}</div>
                 </div>
-
-                <div>
-                  <div className="text-xs">{school.location}</div>
+                <div className="my-2">
+                {school.awards?.map((award) => (
+                  <div className="flex text-sm gap-2">
+                    <div className="font-extrabold">{award.awardName}</div>
+                    <div>-</div>
+                    <div>{award.awardDescription}</div>
+                  </div>
+                ))}
                 </div>
-
-                <div className="mt-2">
-                  <div className="text-xs">{school.dates}</div>
+                <div className="mb-6">
+                  <div className="text-md">{school.dates}</div>
                 </div>
               </div>
             ))}
+            </div>
           </div>
 
           {/* Projects */}
           <div className="section">
-            <div className="text-2xl mb-2 mt-8">Projects</div>
+            <div className="text-2xl mb-2 mt-4">Projects</div> { /* kind of inconsistent with the margins */ }
             {resumeInfo.projects.map((project) => (
               <div>
                 <div className="row-gap-1 font-extrabold">
@@ -88,7 +97,8 @@ export function ResumeDoc() {
                   <span className="mr-1">Project Stack:</span>
                   {project.stack.map((item, index) => (
                     <span key={index} className="text-xs mr-1">
-                      {item.tool}, { /* Need to remove , for the last indexed element */ }
+                      {item.tool}
+                      { index < project.stack.length - 1 ? "," : "" } { /* Need to remove , for the last indexed element */ }
                     </span>
                   ))}
                 </div>
@@ -99,37 +109,52 @@ export function ResumeDoc() {
             ))}
           </div>
 
-          {/* TECHNICAL SKILLS
-          <div className="section">
-            <div className="text-lg mb-2">Technical Skills</div>
-            {resumeInfo.technicalSkills.map((skill) => (
+          {/* TECHNICAL SKILLS  */}
+          <div className="section mt-8">
+            <div className="text-2xl mb-2">Technical Skills & Abilities</div>
+            {/* {resumeInfo.technicalSkills.map((skill) => (
               <div className="resume-container">
                 <div>
                   <h1></h1>
                 </div>
               </div>
-            ))}
-          </div> */}
+            ))} */}
+          </div>
           
           {/* SOFT SKILLS */}
-          <div className="section">
+          <div className="section mt-8">
             <div className="text-2xl mb-2">Soft Skills & Abilities</div>
-            {resumeInfo.softSkills.map((s) => (
-                <div>
-                    <div>{s.skill}</div>
+            <div className="flex gap-2">
+            {Array.from(
+              { length: Math.ceil(resumeInfo.softSkills.length / 7) },
+              (_, chunkIndex) => (
+                <div key={chunkIndex} className="mb-4 w-[350px]">
+                  {resumeInfo.softSkills
+                    .slice(chunkIndex * 7, chunkIndex * 7 + 7)
+                    .map((s, skillIndex) => (
+                      <div className="text-sm" key={skillIndex}>
+                        {s.skill}
+                      </div>
+                    ))}
                 </div>
-            ))}
+              )
+            )}
+            </div>
           </div>
 
           { /* BILINGUAL */ }
-          <div className="section">
+          <div className="section mt-8">
             <div className="text-2xl">Bilingual</div>
-            {resumeInfo.languages.map((lang) => (
-              <div className="inline pr-1">
-                <div className="text-sm inline pr-1">{lang.language}</div>
-                <div className="text-sm inline">|</div> { /* Need to remove | for the last indexed element */ }
+            <div className="flex gap-2">
+            {resumeInfo.languages.map((lang, index) => (
+              <div className="flex gap-2">
+                <div className="text-sm inline">{lang.language}</div>
+                <div className="text-sm inline">
+                { index < resumeInfo.languages.length - 1 ? "|" : "" } { /* Need to remove | for the last indexed element */ }
+                </div>
               </div>
             ))}
+            </div>
           </div>
 
         </div>

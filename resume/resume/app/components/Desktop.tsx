@@ -120,9 +120,10 @@ export function Desktop() {
           
           </div>
           { /* RESUME END */ }
-          <div className="absolute top-65 flex flex-row justify-items-start items-left gap-5">
+          <div className="absolute top-80 flex flex-row justify-items-start items-left gap-5">
             <ResumeModal/>
-            <div className="underline cursor-pointer">Download</div>
+            <ExportResumeButton/>
+            {/* <div className="">Download</div> */}
           </div>
         </div>
         {/* Footer */}
