@@ -82,17 +82,19 @@ export const resumeInfo = {
                 { language: "Java" },
                 { language: "JavaScript" },
                 { language: "PHP" },
+                { language: "T-SQL" },
+                { language: "SQL" },
                 { language: "HTML" },
                 { language: "CSS" },
             ],
             frameworks: [
-                { framework: "ASP.NET Core MVC" },
+                { framework: "ASP.NET Core Framework" },
                 { framework: "Blazor WebAssembly" },
                 { framework: "Entity Framework Core" },
-                { framework: "NodeJS" },
-                { framework: "ReactJS" },
-                { framework: "ExpressJS" },
-                { framework: "NextJS" },
+                { framework: "Node.js" },
+                { framework: "React" },
+                { framework: "Next.js" },
+                { framework: "Express.js" }
             ],
             database: [
                 { language: "T-SQL" },
@@ -108,12 +110,14 @@ export const resumeInfo = {
             tools: [
                 { tool: "Git/GitHub" },
                 { tool: "Azure DevOps" },
+                { tool: "SQL Server Management Studio" },
+                { tool: "MongoDB" },
                 { tool: "Visual Studio 2022" },
                 { tool: "Visual Studio Code" },
-                { tool: "SQL Server Management Studio" },
                 { tool: "Eclipse IDE" },
                 { tool: "PyCharm" },
-                { tool: "PhpStorm" },
+
+                
                 { tool: "Postman" }
             ],
     },

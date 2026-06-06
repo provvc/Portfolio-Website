@@ -16,13 +16,13 @@ export function ResumeDoc() {
           </div>
 
           {/* SUMMARY */}
-          <div>
-            <p className="text-md">{resumeInfo.summary}</p>
+          <div className="mt-4">
+            <p className="text-sm">{resumeInfo.summary}</p>
           </div>
 
           {/* EXPERIENCE */}
           <div className="section">
-            <div className="text-2xl mb-2 mt-8">Experience</div>
+            <div className="text-2xl mb-2 mt-4">Experience</div>
 
             {resumeInfo.experience.map((job) => (
               <div>
@@ -112,13 +112,35 @@ export function ResumeDoc() {
           {/* TECHNICAL SKILLS  */}
           <div className="section mt-8">
             <div className="text-2xl mb-2">Technical Skills & Abilities</div>
-            {/* {resumeInfo.technicalSkills.map((skill) => (
-              <div className="resume-container">
+            <div className="flex gap-12">
+              <div className="flex flex-col gap-1">
+                <div className="text-xl">Programming Languages</div>
                 <div>
-                  <h1></h1>
+                  {resumeInfo.technicalSkills.programming.map((l) => (
+                    <div className="text-sm">{l.language}</div>
+                  ))}
                 </div>
               </div>
-            ))} */}
+              
+              <div className="flex flex-col gap-1">
+                <div className="text-xl">Developer Tools and Platforms</div>
+                <div>
+                  {resumeInfo.technicalSkills.tools.map((t) => (
+                    <div className="text-sm">{t.tool}</div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-1">
+                <div className="text-xl">Frameworks</div>
+                <div>
+                  {resumeInfo.technicalSkills.frameworks.map((f) => (
+                    <div className="text-sm">{f.framework}</div>
+                  ))}
+                </div>
+              </div>
+
+            </div>
           </div>
           
           {/* SOFT SKILLS */}
@@ -128,7 +150,7 @@ export function ResumeDoc() {
             {Array.from(
               { length: Math.ceil(resumeInfo.softSkills.length / 7) },
               (_, chunkIndex) => (
-                <div key={chunkIndex} className="mb-4 w-[350px]">
+                <div key={chunkIndex} className="mb-4 w-[265px]">
                   {resumeInfo.softSkills
                     .slice(chunkIndex * 7, chunkIndex * 7 + 7)
                     .map((s, skillIndex) => (

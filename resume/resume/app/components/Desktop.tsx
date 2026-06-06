@@ -32,7 +32,6 @@ export function Desktop() {
   const resumeRef = useRef<HTMLDivElement>(null);
   const interestsRef = useRef<HTMLDivElement>(null);
 
-
   { /* Controls the tab dragging */ }
   useEffect(() => {
     if (homeRef.current) dragElement(homeRef.current);
@@ -120,7 +119,7 @@ export function Desktop() {
           
           </div>
           { /* RESUME END */ }
-          <div className="absolute top-80 flex flex-row justify-items-start items-left gap-5">
+          <div className="absolute top-90 flex flex-row justify-items-start items-left gap-5">
             <ResumeModal/>
             <ExportResumeButton/>
             {/* <div className="">Download</div> */}
