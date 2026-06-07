@@ -113,16 +113,16 @@ export function Desktop() {
         {/* Body */}
         <div className="bg-white flex flex-col gap-2 px-2 mx-2 rounded-xs border mb-1 h-[400px] w-inherit">
           { /* RESUME START */ }
-          <div className="flex flex-col scale-x-20 p-2 mt-2 scale-y-15 origin-top-left self-start border border-black">
+          <div className="flex flex-col scale-x-20 p-2 mt-2 scale-y-12 origin-top-left self-start border border-black">
           
           <ResumeDoc/>         
           
           </div>
           { /* RESUME END */ }
-          <div className="absolute top-90 flex flex-row justify-items-start items-left gap-5">
+          <div className="absolute top-75 flex flex-row justify-items-start items-left gap-5">
             <ResumeModal/>
             <ExportResumeButton/>
-            {/* <div className="">Download</div> */}
+            
           </div>
         </div>
         {/* Footer */}

@@ -40,7 +40,7 @@ export async function GET() {
         });
         } catch (err) {
         return NextResponse.json(
-            { error: "Failed to export resume" },
+            { error: `${err}` },
             { status: 500 }
         );
     }
