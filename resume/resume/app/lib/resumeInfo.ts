@@ -139,6 +139,6 @@ export const resumeInfo = {
     ],
     languages: [
         { language: "English" },
-        { language: "Francais" }
+        { language: "Français" }
     ],
 };

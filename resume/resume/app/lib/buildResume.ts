@@ -14,7 +14,7 @@ export function buildResumeHTML() {
   <div class="flex flex-col gap-2">
 
     <!-- HEADER -->
-    <div class="center-column">
+    <div class="flex flex-col justify-center items-center">
       <div class="text-xl">${resumeInfo.name}</div>
       <div class="text-xs">${resumeInfo.address}</div>
       <div class="text-xs">${resumeInfo.phone}</div>
@@ -31,7 +31,7 @@ export function buildResumeHTML() {
 
       ${resumeInfo.experience.map((job) => `
         <div>
-          <div class="row-gap-1 font-extrabold">
+          <div class="flex gap-1 font-extrabold">
             <div class="text-xs mr-2">${job.company}</div>
             <div class="text-xs">|</div>
             <div class="text-xs ml-2 mr-2">${job.title}</div>
@@ -60,7 +60,7 @@ export function buildResumeHTML() {
       <div class="mt-1">
         ${resumeInfo.education.map((school) => `
           <div class="my-4">
-            <div class="row-gap-1 font-extrabold">
+            <div class="flex gap-1 font-extrabold">
               <div class="text-xs">${school.institution},</div>
               <div class="text-xs mr-2">${school.location}</div>
               <div class="text-xs">|</div>
@@ -88,7 +88,7 @@ export function buildResumeHTML() {
       <div class="text-xl font-bold mb-2 mt-2">Projects</div>
       ${resumeInfo.projects.map((project) => `
         <div>
-          <div class="row-gap-1 font-extrabold">
+          <div class="flex gap-2 font-extrabold">
             <div class="text-xs">${project.name}</div>
             <div class="text-xs">|</div>
             <div class="text-xs">${project.type}</div>

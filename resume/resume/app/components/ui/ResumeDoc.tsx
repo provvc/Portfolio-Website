@@ -9,7 +9,7 @@ export function ResumeDoc() {
         <div className="flex flex-col gap-2">
 
           {/* HEADER */}
-          <div className="center-column">
+          <div className="flex flex-col justify-center items-center">
             <div className="text-xl">{resumeInfo.name}</div>
             <div className="text-sm">{resumeInfo.address}</div>
             <div className="text-sm">{resumeInfo.phone}</div>
@@ -26,7 +26,7 @@ export function ResumeDoc() {
 
             {resumeInfo.experience.map((job) => (
               <div>
-                <div className="row-gap-1 font-extrabold">
+                <div className="flex gap-1 font-extrabold">
                   <div className="text-sm mr-2">{job.company}</div>
                   <div className="text-sm">|</div>
                   <div className="text-sm ml-2 mr-2">{job.title}</div>
@@ -57,7 +57,7 @@ export function ResumeDoc() {
             <div className="mt-2">
             {resumeInfo.education.map((school) => (
               <div className="my-4">
-                <div className="row-gap-1 font-extrabold">
+                <div className="flex gap-1 font-extrabold">
                   <div className="text-sm">{school.institution},</div>
                   <div className="text-sm mr-2">{school.location}</div>
                   <div className="text-sm">|</div>
@@ -85,7 +85,7 @@ export function ResumeDoc() {
             <div className="text-2xl mb-2 mt-4">Projects</div> { /* kind of inconsistent with the margins */ }
             {resumeInfo.projects.map((project) => (
               <div>
-                <div className="row-gap-1 font-extrabold">
+                <div className="flex gap-2 font-extrabold">
                   <div className="text-sm">{project.name}</div>
                   <div className="text-sm">|</div>
                   <div className="text-sm">{project.type}</div>
@@ -170,8 +170,8 @@ export function ResumeDoc() {
             <div className="flex gap-2">
             {resumeInfo.languages.map((lang, index) => (
               <div className="flex gap-2">
-                <div className="text-sm inline">{lang.language}</div>
-                <div className="text-sm inline">
+                <div className="text-sm">{lang.language}</div>
+                <div className="text-sm">
                 { index < resumeInfo.languages.length - 1 ? "|" : "" } { /* Need to remove | for the last indexed element */ }
                 </div>
               </div>

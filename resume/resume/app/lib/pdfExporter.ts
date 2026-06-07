@@ -2,11 +2,9 @@ import fs from "fs";
 import path from "path";
 
 export async function exportPDF(data: String) {
-    
-    const chunksDir = path.join(process.cwd(), ".next/static/chunks");
-    const cssFiles = fs.readdirSync(chunksDir).filter(f => f.endsWith(".css"));
-    const compiledCSS = cssFiles.map(f => fs.readFileSync(path.join(chunksDir, f), "utf-8")).join("\n");
-    
+
+    const compiledCSS = fs.readFileSync(path.join(process.cwd(), "public", "resume-styles.css"), "utf-8");
+
     const pdfEndpointResponse = await fetch("https://api.pdfendpoint.com/v1/convert", {
         method: "POST",
         headers: {
@@ -17,15 +15,15 @@ export async function exportPDF(data: String) {
             html: data,
             css: `
                 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
-                ${compiledCSS} // *** he chunks CSS file that is compiled from tailwindcss styles by NextJS
+                ${compiledCSS}
             `,
             sandbox: true,
-		    orientation: "vertical",
-		    page_size: "A4",
-		    margin_top: "1cm",
-		    margin_bottom: "1cm",
-		    margin_left: "1cm",
-		    margin_right: "1cm"
+            orientation: "vertical",
+            page_size: "A4",
+            margin_top: "1cm",
+            margin_bottom: "1cm",
+            margin_left: "1cm",
+            margin_right: "1cm"
         }),
     });
 
