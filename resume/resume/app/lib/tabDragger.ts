@@ -42,9 +42,22 @@ export function dragElement(elmnt: HTMLElement): void {
     pos3 = e.clientX;
     pos4 = e.clientY;
 
-    // set the element's new position:
-    elmnt.style.top = `${elmnt.offsetTop - pos2}px`;
-    elmnt.style.left = `${elmnt.offsetLeft - pos1}px`;
+    let newTop = elmnt.offsetTop - pos2;
+    let newLeft = elmnt.offsetLeft - pos1;
+
+    // // set the element's new position:
+    // elmnt.style.top = `${elmnt.offsetTop - pos2}px`;
+    // elmnt.style.left = `${elmnt.offsetLeft - pos1}px`;
+
+    const maxTop = window.innerHeight - elmnt.offsetHeight;
+    const maxLeft = window.innerWidth - elmnt.offsetWidth;
+
+    newTop = Math.max(0, Math.min(newTop, maxTop));
+    newLeft = Math.max(0, Math.min(newLeft, maxLeft));
+
+    // set the element's new position as it moves
+    elmnt.style.top = `${newTop}px`;
+    elmnt.style.left = `${newLeft}px`;
   }
 
   function closeDragElement(): void {

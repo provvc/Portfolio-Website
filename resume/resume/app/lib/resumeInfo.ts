@@ -56,7 +56,8 @@ export const resumeInfo = {
                 { tool: "CSS" },
                 { tool: "Tailwind CSS" },
             ],
-            link: "www.linktomygithubproject.com"
+            link: "https://github.com/provvc/2022-program-exit-assessment-ChrisProvencher/tree/main/3rdYear/Development%20Project",
+            linkTitle: "Link to GitHub Repository"
         },
         {
             name: "BookMark",
@@ -71,7 +72,8 @@ export const resumeInfo = {
                 { tool: "CSS" },
                 { tool: "Tailwind CSS" },
             ],
-            link: "www.linktomygithubproject.com"
+            link: "https://github.com/provvc/2022-program-exit-assessment-ChrisProvencher/tree/main/3rdYear/Systems%20Maintenance",
+            linkTitle: "Link to GitHub Repository"
         }
     ],
     technicalSkills: 

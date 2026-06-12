@@ -103,7 +103,7 @@ export function buildResumeHTML() {
             `).join("")}
           </div>
           <div class="mt-2 mb-2 text-xs underline font-bold">
-            <p>${project.link}</p>
+            <p>${project.linkTitle}</p>
           </div>
         </div>
       `).join("")}

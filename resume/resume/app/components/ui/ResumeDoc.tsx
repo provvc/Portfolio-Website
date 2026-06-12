@@ -102,9 +102,9 @@ export function ResumeDoc() {
                     </span>
                   ))}
                 </div>
-                <div className="mt-2 mb-2 text-xs underline font-bold">
-                  <p>{project.link}</p>
-                </div>
+                <a className="mt-2 mb-2 text-xs underline font-bold block" target="_blank" href={project.link}>
+                  <p>{project.linkTitle}</p>
+                </a>
               </div>
             ))}
           </div>
