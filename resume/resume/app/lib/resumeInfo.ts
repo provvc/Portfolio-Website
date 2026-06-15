@@ -6,8 +6,8 @@ export const resumeInfo = {
     name: "Christopher Provencher",
     address: "Gatineau, QC, Canada",
     phone: "chrisprov2003@gmail.com",
-    websiteLink: "https://chrisprovencher.netlify.com",
-    websiteTitle: "chrisprovencher.netlify.com",
+    websiteLink: "https://chrisprovencher.netlify.app",
+    websiteTitle: "chrisprovencher.netlify.app",
     summary: "Recent Computer Science graduate seeking employment opportunity in technical or non-technical roles to apply my academic experience within a professional environment and gain valuable work experience.",
     experience: [
         {
