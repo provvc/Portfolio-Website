@@ -2,20 +2,6 @@ import { NextResponse } from "next/server";
 import { exportPDF } from "@/app/lib/pdfExporter";
 import { buildResumeHTML } from "@/app/lib/buildResume";
 
-// export async function POST() {
-//     try {
-//         const html = buildResumeHTML();
-//         const result = await exportPDF(html);
-
-//         return NextResponse.json(result);
-//     } catch (err) {
-//         return NextResponse.json(
-//             { error: "Failed to export resume" },
-//             { status: 500 }
-//         );
-//     }
-// }
-
 export async function GET() {
 
     try {

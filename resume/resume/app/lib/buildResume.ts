@@ -14,20 +14,21 @@ export function buildResumeHTML() {
   <div class="flex flex-col gap-2">
 
     <!-- HEADER -->
-    <div class="flex flex-col justify-center items-center">
-      <div class="text-xl">${resumeInfo.name}</div>
+    <div class="flex flex-col justify-center items-center mb-2">
+      <div class="text-lg">${resumeInfo.name}</div>
       <div class="text-xs">${resumeInfo.address}</div>
       <div class="text-xs">${resumeInfo.phone}</div>
+      <div class="text-xs"><a target="_blank" href=${resumeInfo.websiteLink}>${resumeInfo.websiteTitle}</a></div>
     </div>
 
     <!-- SUMMARY -->
     <div>
-      <p class="text-sm">${resumeInfo.summary}</p>
+      <p class="text-xs">${resumeInfo.summary}</p>
     </div>
 
     <!-- EXPERIENCE -->
     <div class="section">
-      <div class="text-xl font-bold mb-2 mt-4">Experience</div>
+      <div class="text-xl font-semibold mb-2 mt-4">Experience</div>
 
       ${resumeInfo.experience.map((job) => `
         <div>
@@ -56,7 +57,7 @@ export function buildResumeHTML() {
 
     <!-- EDUCATION -->
     <div class="section">
-      <div class="text-xl font-bold mt-4">Education</div>
+      <div class="text-xl font-semibold mt-4">Education</div>
       <div class="mt-1">
         ${resumeInfo.education.map((school) => `
           <div class="my-4">
@@ -85,7 +86,7 @@ export function buildResumeHTML() {
 
     <!-- PROJECTS -->
     <div class="section">
-      <div class="text-xl font-bold mb-2 mt-2">Projects</div>
+      <div class="text-xl font-semibold mb-2 mt-1">Projects</div>
       ${resumeInfo.projects.map((project) => `
         <div>
           <div class="flex gap-2 font-extrabold">
@@ -111,17 +112,46 @@ export function buildResumeHTML() {
 
     <!-- TECHNICAL SKILLS -->
     <div class="section mt-4">
-      <div class="text-xl font-bold mb-2">Technical Skills & Abilities</div>
+            <div class="text-xl font-semibold mb-2 mt-2">Technical Skills & Abilities</div>
+            <div class="flex gap-12">
+              <div class="flex flex-col gap-1">
+                <div class="text-md">Programming Languages</div>
+                <div>
+                  ${resumeInfo.technicalSkills.programming.map((l) => 
+                    `<div class="text-xs">${l.language}</div>`
+                  ).join("")}
+                </div>
+              </div>
+              
+              <div class="flex flex-col gap-1">
+                <div class="text-md">Developer Tools & Platforms</div>
+                <div>
+                  ${resumeInfo.technicalSkills.tools.map((t) => 
+                    `<div class="text-xs">${t.tool}</div>`
+                  ).join("")}
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-1">
+                <div class="text-md">Frameworks</div>
+                <div>
+                  ${resumeInfo.technicalSkills.frameworks.map((f) => 
+                    `<div class="text-xs">${f.framework}</div>`
+                  ).join("")}
+                </div>
+              </div>
+
+            </div>
     </div>
 
     <!-- SOFT SKILLS -->
     <div class="section mt-4">
-      <div class="text-xl font-bold mb-2">Soft Skills & Abilities</div>
+      <div class="text-xl font-semibold mb-2">Soft Skills & Abilities</div>
       <div class="flex gap-2">
         ${Array.from(
           { length: Math.ceil(resumeInfo.softSkills.length / 7) },
           (_, chunkIndex) => `
-            <div class="mb-4 w-[350px]">
+            <div class="mb-4" style="width: 225px;">
               ${resumeInfo.softSkills
                 .slice(chunkIndex * 7, chunkIndex * 7 + 7)
                 .map((s) => `<div class="text-xs">${s.skill}</div>`)
@@ -134,7 +164,7 @@ export function buildResumeHTML() {
 
     <!-- BILINGUAL -->
     <div class="section mt-4">
-      <div class="text-xl font-bold">Bilingual</div>
+      <div class="text-xl font-semibold">Bilingual</div>
       <div class="flex gap-2">
         ${resumeInfo.languages.map((lang, index) => `
           <div class="flex gap-2">

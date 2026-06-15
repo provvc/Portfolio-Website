@@ -13,6 +13,7 @@ export function ResumeDoc() {
             <div className="text-xl">{resumeInfo.name}</div>
             <div className="text-sm">{resumeInfo.address}</div>
             <div className="text-sm">{resumeInfo.phone}</div>
+            <div className="text-sm"><a target="_blank" href={resumeInfo.websiteLink}>{resumeInfo.websiteTitle}</a></div>
           </div>
 
           {/* SUMMARY */}
@@ -123,7 +124,7 @@ export function ResumeDoc() {
               </div>
               
               <div className="flex flex-col gap-1">
-                <div className="text-xl">Developer Tools and Platforms</div>
+                <div className="text-xl">Developer Tools & Platforms</div>
                 <div>
                   {resumeInfo.technicalSkills.tools.map((t) => (
                     <div className="text-sm">{t.tool}</div>

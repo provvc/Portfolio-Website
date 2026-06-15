@@ -230,7 +230,10 @@ export function Desktop() {
             </div>
           </div>
           {/* Body */}
-          <div className="bg-white flex flex-col gap-2 px-2 mx-2 rounded-xs border mb-1 h-[400px]">
+          <div className="bg-white flex justify-center items-center flex-row gap-2 px-2 mx-2 rounded-xs border mb-1 h-[400px]">
+            Tab in progress...
+          </div>
+          {/* <div className="bg-white flex flex-col gap-2 px-2 mx-2 rounded-xs border mb-1 h-[400px]">
             <div className="flex flex-col">
               <div>WPM Typing</div>
               <div>This project was developed as part of a Computer Science third-year final project.</div>
@@ -244,7 +247,7 @@ export function Desktop() {
             <div className="flex">
               <div>BookMark</div>  
             </div>  
-          </div>
+          </div> */}
           {/* Footer */}
           <div className="bg-white flex flex-row gap-2 px-2 mx-2 rounded-xs border mb-4 h-[150px]">Footer</div>
         </div>
