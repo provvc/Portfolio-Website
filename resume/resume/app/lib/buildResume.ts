@@ -103,9 +103,9 @@ export function buildResumeHTML() {
               <span class="text-xs mr-1">${item.tool}${index < project.stack.length - 1 ? "," : ""}</span>
             `).join("")}
           </div>
-          <div class="mt-2 mb-2 text-xs underline font-bold">
-            <p>${project.linkTitle}</p>
-          </div>
+          <a class="mt-2 mb-2 text-xs underline font-bold block" target="_blank" href=${project.link}>
+                  <p>${project.linkTitle}</p>
+          </a>
         </div>
       `).join("")}
     </div>
