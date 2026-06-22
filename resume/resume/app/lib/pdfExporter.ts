@@ -17,7 +17,7 @@ export async function exportPDF(data: String) {
                 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
                 ${compiledCSS}
             `,
-            sandbox: false,
+            sandbox: true,
             orientation: "vertical",
             page_size: "A4",
             margin_top: "1cm",

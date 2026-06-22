@@ -166,7 +166,7 @@ export function ResumeDoc() {
           </div>
 
           { /* BILINGUAL */ }
-          <div className="section mt-8">
+          <div className="section mt-8 mb-4">
             <div className="text-2xl">Bilingual</div>
             <div className="flex gap-2">
             {resumeInfo.languages.map((lang, index) => (

@@ -10,6 +10,8 @@ export async function GET() {
         // Call the PDFEndpoint API to generate the PDF
         const result = await exportPDF(html);
 
+        // console.log(result)
+
         // Retrieve the PDF URL from the response
         const pdfUrl = result.data.url;
 

@@ -11,6 +11,7 @@ import { resumeInfo } from "@/app/lib/resumeInfo";
 import { ResumeModal } from "./ui/ResumeModal";
 import { ResumeDoc } from "./ui/ResumeDoc";
 import { ExportResumeButton } from "./ExportResumeButton";
+import { ShapesSketch } from "./ui/rotatingSquare";
 
 import "../globals.css";
 
@@ -73,7 +74,7 @@ export function Desktop() {
       { /* HOME */ }
       {windows.home && (
 
-          <div ref={homeRef} className="tab-bkg rounded-xs shadow-md absolute resize-x resize-y overflow window w-[687px]" id="homediv">
+          <div ref={homeRef} className="tab-bkg rounded-xs shadow-md absolute resize-x resize-y overflow window w-[687px] z-100" id="homediv">
           {/* Header */}
           <div className="flex flex-row gap-2 py-2 px-2 justify-between items-center" id="homedivheader">
             <div className="text-3xl">
@@ -130,7 +131,7 @@ export function Desktop() {
 
       { /* Experience */ }
       {windows.experience && (
-        <div ref={experienceRef} className="tab-bkg rounded-xs shadow-md absolute resize-x resize-y overflow window w-[687px]" id="experiencediv">
+        <div ref={experienceRef} className="tab-bkg rounded-xs shadow-md absolute resize-x resize-y overflow window w-[687px] z-100" id="experiencediv">
           {/* Header */}
           <div className="flex flex-row gap-2 py-2 px-2 justify-between items-center" id="experiencedivheader">
             <div className="text-3xl">
@@ -185,7 +186,7 @@ export function Desktop() {
 
       { /* Projects */ }
       {windows.projects && (
-        <div ref={projectsRef} className="tab-bkg rounded-xs shadow-md absolute resize-x resize-y overflow window w-[687px]" id="projectsdiv">
+        <div ref={projectsRef} className="tab-bkg rounded-xs shadow-md absolute resize-x resize-y overflow window w-[687px] z-100" id="projectsdiv">
           {/* Header */}
           <div className="flex flex-row gap-2 py-2 px-2 justify-between items-center" id="projectsdivheader">
             <div className="text-3xl">
@@ -233,6 +234,60 @@ export function Desktop() {
           <div className="bg-white flex justify-center items-center flex-row gap-2 px-2 mx-2 rounded-xs border mb-1 h-[400px]">
             Tab in progress...
           </div>
+          {/* <div className="bg-white flex flex-row gap-10 px-2 mx-2 rounded-xs border mb-1 h-[400px]">
+
+            <div className="flex flex-col gap-4 items-center">
+              <div className="h-[75px] w-[101.25px] bg-blue-300 mt-2 rounded-lg z-1 hover:cursor-pointer shadow-[0_10px_14px_rgba(0,0,0,0.25)]">
+                <div className="h-[75px] w-[101.25px] bg-blue-300 relative rounded-md top-[2px] z-3"></div>
+                <div className="h-[63.75px] w-[93.75px] bg-white rounded relative top-[-68px] left-[4px] z-5 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.25)]"></div>
+                <div className="h-[75px] w-[101.25px] bg-blue-200 relative top-[-170%] rounded-lg z-6 shadow-[0_-3px_6px_-1px_rgba(0,0,0,0.12)]"></div>
+                <div className="relative top-[-290%] left-[15%] border-t-[7.5px] border-t-white border-l-[15px] border-l-transparent z-2"></div>
+              </div>
+              <div>WPM Typing</div>
+            </div>
+
+            <div className="flex flex-col gap-4 items-center">
+              <div className="h-[75px] w-[101.25px] bg-blue-300 mt-2 rounded-lg z-1 hover:cursor-pointer shadow-[0_10px_14px_rgba(0,0,0,0.25)]">
+                <div className="h-[75px] w-[101.25px] bg-blue-300 relative rounded-md top-[2px] z-3"></div>
+                <div className="h-[63.75px] w-[93.75px] bg-white rounded relative top-[-68px] left-[4px] z-5 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.25)]"></div>
+                <div className="h-[75px] w-[101.25px] bg-blue-200 relative top-[-170%] rounded-lg z-6 shadow-[0_-3px_6px_-1px_rgba(0,0,0,0.12)]"></div>
+                <div className="relative top-[-290%] left-[15%] border-t-[7.5px] border-t-white border-l-[15px] border-l-transparent z-2"></div>
+              </div>
+              <div>BookMark</div>
+            </div>
+
+            <div className="flex flex-col gap-4 items-center">
+              <div className="h-[75px] w-[101.25px] bg-blue-300 mt-2 rounded-lg z-1 hover:cursor-pointer shadow-[0_10px_14px_rgba(0,0,0,0.25)]">
+                <div className="h-[75px] w-[101.25px] bg-blue-300 relative rounded-md top-[2px] z-3"></div>
+                <div className="h-[63.75px] w-[93.75px] bg-white rounded relative top-[-68px] left-[4px] z-5 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.25)]"></div>
+                <div className="h-[75px] w-[101.25px] bg-blue-200 relative top-[-170%] rounded-lg z-6 shadow-[0_-3px_6px_-1px_rgba(0,0,0,0.12)]"></div>
+                <div className="relative top-[-290%] left-[15%] border-t-[7.5px] border-t-white border-l-[15px] border-l-transparent z-2"></div>
+              </div>
+              <div>NHL Stats</div>
+            </div>
+
+            <div className="flex flex-col gap-4 items-center">
+              <div className="h-[75px] w-[101.25px] bg-blue-300 mt-2 rounded-lg z-1 hover:cursor-pointer shadow-[0_10px_14px_rgba(0,0,0,0.25)]">
+                <div className="h-[75px] w-[101.25px] bg-blue-300 relative rounded-md top-[2px] z-3"></div>
+                <div className="h-[63.75px] w-[93.75px] bg-white rounded relative top-[-68px] left-[4px] z-5 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.25)]"></div>
+                <div className="h-[75px] w-[101.25px] bg-blue-200 relative top-[-170%] rounded-lg z-6 shadow-[0_-3px_6px_-1px_rgba(0,0,0,0.12)]"></div>
+                <div className="relative top-[-290%]  left-[15%] border-t-[7.5px] border-t-white border-l-[15px] border-l-transparent z-2"></div>
+              </div>
+              <div>Le Studio</div>
+            </div>
+            
+            <div className="flex flex-col gap-4 items-center">
+              <div className="h-[75px] w-[101.25px] bg-blue-300 mt-2 rounded-lg z-1 hover:cursor-pointer shadow-[0_10px_14px_rgba(0,0,0,0.25)]">
+                <div className="h-[75px] w-[101.25px] bg-blue-300 relative rounded-md top-[2px] z-3"></div>
+                <div className="h-[63.75px] w-[93.75px] bg-white rounded relative top-[-68px] left-[4px] z-5 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.25)]"></div>
+                <div className="h-[75px] w-[101.25px] bg-blue-200 relative top-[-170%] rounded-lg z-6 shadow-[0_-3px_6px_-1px_rgba(0,0,0,0.12)]"></div>
+                <div className="relative top-[-290%]  left-[15%] border-t-[7.5px] border-t-white border-l-[15px] border-l-transparent z-2"></div>
+              </div>
+              <div>Golf App</div>
+            </div>
+
+          </div> */}
+          
           {/* <div className="bg-white flex flex-col gap-2 px-2 mx-2 rounded-xs border mb-1 h-[400px]">
             <div className="flex flex-col">
               <div>WPM Typing</div>
@@ -255,7 +310,7 @@ export function Desktop() {
 
       { /* Resume */ }
       {windows.resume && (
-        <div ref={resumeRef} className="tab-bkg rounded-xs shadow-md absolute resize-x resize-y overflow window w-[687px]" id="resumediv">
+        <div ref={resumeRef} className="tab-bkg rounded-xs shadow-md absolute resize-x resize-y overflow window w-[687px] z-100" id="resumediv">
           {/* Header */}
           <div className="flex flex-row gap-2 py-2 px-2 justify-between items-center" id="resumedivheader">
             <div className="text-3xl">
@@ -305,11 +360,11 @@ export function Desktop() {
             { /* RESUME START */ }
             <div className="flex flex-col scale-x-20 p-2 mt-2 scale-y-12 origin-top-left self-start border border-black">
             
-            <ResumeDoc/>         
-            
+            <ResumeDoc/>
+
             </div>
             { /* RESUME END */ }
-            <div className="absolute top-75 flex flex-row justify-items-start items-left gap-5">
+            <div className="absolute top-80 flex flex-row justify-items-start items-left gap-5">
               <ResumeModal/>
               <ExportResumeButton/>
               
@@ -323,7 +378,7 @@ export function Desktop() {
         
       { /* Interests */ }
       {windows.interests && (
-        <div ref={interestsRef} className="tab-bkg rounded-xs shadow-md absolute resize-x resize-y overflow window w-[687px]" id="interestsdiv">
+        <div ref={interestsRef} className="tab-bkg rounded-xs shadow-md absolute resize-x resize-y overflow window w-[687px] z-100" id="interestsdiv">
           {/* Header */}
           <div className="flex flex-row gap-2 py-2 px-2 justify-between items-center" id="interestsdivheader">
             <div className="text-3xl">

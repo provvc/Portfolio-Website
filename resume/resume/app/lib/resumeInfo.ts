@@ -32,8 +32,8 @@ export const resumeInfo = {
             location: "Gatineau, QC",
             degree: "DEC in Computer Science",
             awards: [
-                { awardName: "Dean's Honour Roll Recepient", awardDescription: "Academic recognition awarded to students with a 90+ average." },
-                { awardName: "Honour Roll Recepient", awardDescription: "Academic recognition awarded to students with an 80-89 average." }
+                { awardName: "Dean's Honour Roll Recipient", awardDescription: "Academic recognition awarded to students with a 90+ average." },
+                { awardName: "Honour Roll Recipient", awardDescription: "Academic recognition awarded to students with an 80-89 average." }
             ],
             dates: "August 2022 - May 2026",
         },
@@ -51,7 +51,7 @@ export const resumeInfo = {
             context: "Web application designed to provide the Computer Science department of Cegep Heritage College with a fun and competitive environment for improving on their typing speeds, an essential and helpful Computer Science proficiency.",
             learningOutcome: "",
             stack: [
-                { tool: "C# ASP .NET Core Framework" },
+                { tool: "C# ASP.NET Core Framework" },
                 { tool: "T-SQL" },
                 { tool: "JavaScript" },
                 { tool: "HTML" },
@@ -64,10 +64,10 @@ export const resumeInfo = {
         {
             name: "BookMark",
             type: "Team-based Development Project",
-            context: "Web application designed for the Cegep Heritage College library as an online catalogue and book suggestion platform for students and staff of the academic institution. Additionally, centralizing all existing online Heritage library services via there integration into the newly developed application.",
+            context: "Web application designed for the Cegep Heritage College library as an online catalogue and book suggestion platform for students and staff of the academic institution. Additionally, centralizing all existing online Heritage library services via their integration into the newly developed application.",
             learningOutcome: "",
             stack: [
-                { tool: "C# ASP .NET Core Framework" },
+                { tool: "C# ASP.NET Core Framework" },
                 { tool: "T-SQL" },
                 { tool: "JavaScript" },
                 { tool: "HTML" },
@@ -75,6 +75,22 @@ export const resumeInfo = {
                 { tool: "Tailwind CSS" },
             ],
             link: "https://github.com/provvc/2022-program-exit-assessment-ChrisProvencher/tree/main/3rdYear/Systems%20Maintenance",
+            linkTitle: "Link to GitHub Repository"
+        },
+        {
+            name: "Golf App",
+            type: "Solo Development Project",
+            context: "A mobile application for golfers to browse local courses, monitor yardage, and track live and all-time round statistics — all accompanied by an interactive hole-by-hole course map. This app development is still in progress.",
+            learningOutcome: "",
+            stack: [
+                { tool: "TypeScript" },
+                { tool: "ReactNative" },
+                { tool: "Expo" },
+                { tool: "Node.js" },
+                { tool: "C#" },
+                { tool: "ASP.NET Core Framework" }
+            ],
+            link: "https://github.com/provvc/Golf-App",
             linkTitle: "Link to GitHub Repository"
         }
     ],
@@ -85,6 +101,7 @@ export const resumeInfo = {
                 { language: "Python" },
                 { language: "Java" },
                 { language: "JavaScript" },
+                { language: "TypeScript" },
                 { language: "PHP" },
                 { language: "T-SQL" },
                 { language: "SQL" },
@@ -97,6 +114,7 @@ export const resumeInfo = {
                 { framework: "Entity Framework Core" },
                 { framework: "Node.js" },
                 { framework: "React" },
+                { framework: "ReactNative" },
                 { framework: "Next.js" },
                 { framework: "Express.js" }
             ],
@@ -116,12 +134,11 @@ export const resumeInfo = {
                 { tool: "Azure DevOps" },
                 { tool: "SQL Server Management Studio" },
                 { tool: "MongoDB" },
+                { tool: "Netlify" },
                 { tool: "Visual Studio 2022" },
                 { tool: "Visual Studio Code" },
                 { tool: "Eclipse IDE" },
                 { tool: "PyCharm" },
-
-                
                 { tool: "Postman" }
             ],
     },
@@ -139,7 +156,7 @@ export const resumeInfo = {
         { skill: "Accountable" },
         { skill: "Reliable" },
         { skill: "Team-Oriented" },
-        { skill: "Respectul" },
+        { skill: "Respectful" },
     ],
     languages: [
         { language: "English" },
