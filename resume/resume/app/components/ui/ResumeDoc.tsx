@@ -115,11 +115,22 @@ export function ResumeDoc() {
             <div className="text-2xl mb-2">Technical Skills & Abilities</div>
             <div className="flex gap-12">
               <div className="flex flex-col gap-1">
-                <div className="text-xl">Programming Languages</div>
-                <div>
-                  {resumeInfo.technicalSkills.programming.map((l) => (
-                    <div className="text-sm">{l.language}</div>
-                  ))}
+                <div className="text-xl">Languages & Frameworks</div>
+                <div className="flex gap-20"> {/* row container for chunks */}
+                  {Array.from(
+                    { length: Math.ceil(resumeInfo.technicalSkills.skills.length / 10) },
+                    (_, chunkIndex) => (
+                      <div key={chunkIndex} className="flex flex-col">
+                        {resumeInfo.technicalSkills.skills
+                          .slice(chunkIndex * 10, chunkIndex * 10 + 10)
+                          .map((s, skillIndex) => (
+                            <div className="text-sm" key={skillIndex}>
+                              {s.item}
+                            </div>
+                          ))}
+                      </div>
+                    )
+                  )}
                 </div>
               </div>
               
@@ -133,10 +144,10 @@ export function ResumeDoc() {
               </div>
 
               <div className="flex flex-col gap-1">
-                <div className="text-xl">Frameworks</div>
+                <div className="text-xl">Development Practices</div>
                 <div>
-                  {resumeInfo.technicalSkills.frameworks.map((f) => (
-                    <div className="text-sm">{f.framework}</div>
+                  {resumeInfo.technicalSkills.practices.map((f) => (
+                    <div className="text-sm">{f.practice}</div>
                   ))}
                 </div>
               </div>

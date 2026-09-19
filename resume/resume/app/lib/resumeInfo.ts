@@ -63,7 +63,7 @@ export const resumeInfo = {
         },
         {
             name: "BookMark",
-            type: "Team-based Development Project",
+            type: "Team-based Maintenance Project",
             context: "Web application designed for the Cegep Heritage College library as an online catalogue and book suggestion platform for students and staff of the academic institution. Additionally, centralizing all existing online Heritage library services via their integration into the newly developed application.",
             learningOutcome: "",
             stack: [
@@ -96,50 +96,51 @@ export const resumeInfo = {
     ],
     technicalSkills: 
     {
-            programming: [
-                { language: "C#" },
-                { language: "Python" },
-                { language: "Java" },
-                { language: "JavaScript" },
-                { language: "TypeScript" },
-                { language: "PHP" },
-                { language: "T-SQL" },
-                { language: "SQL" },
-                { language: "HTML" },
-                { language: "CSS" },
+
+            skills: [
+                { item: "C#" },
+                { item: "Python" },
+                { item: "Java" },
+                { item: "JavaScript" },
+                { item: "TypeScript" },
+                { item: "PHP" },
+                { item: "T-SQL" },
+                { item: "SQL" },
+                { item: "MongoDB" },
+                { item: "REST APIs" },
+                { item: "ASP.NET Core Framework" },
+                { item: "Entity Framework Core" },
+                { item: "React" },
+                { item: "ReactNative" },
+                { item: "Next.js" },
+                { item: "Node.js" },
+                { item: "Express.js" },
+                { item: "HTML" },
+                { item: "CSS" },
+                { item: "TailwindCSS" },
+
             ],
-            frameworks: [
-                { framework: "ASP.NET Core Framework" },
-                { framework: "Blazor WebAssembly" },
-                { framework: "Entity Framework Core" },
-                { framework: "Node.js" },
-                { framework: "React" },
-                { framework: "ReactNative" },
-                { framework: "Next.js" },
-                { framework: "Express.js" }
-            ],
-            database: [
-                { language: "T-SQL" },
-                { language: "SQL" },
-                { language: "MongoDB" }
-            ],
-            security: [
-                { skill: "nmap" },
-                { skill: "Kali Linux" },
-                { skill: "Wireshark" },
-                { skill: "Burp Suite" },
+            practices: [
+                { practice: "Agile/Scrum Methodologies" },
+                { practice: "Technical & User Documentation" },
+                { practice: "System Requirements Gathering" },
+                { practice: "Database Design & Normalization" },
+                { practice: "Unit/Functional/Performance/Business- Testing" },
+                { practice: "CI/CD Pipelines" },
+                { practice: "Code Reviews" },
             ],
             tools: [
                 { tool: "Git/GitHub" },
                 { tool: "Azure DevOps" },
+                { tool: "Postman" },
+                { tool: "OWASP ZAP" },
                 { tool: "SQL Server Management Studio" },
-                { tool: "MongoDB" },
+                { tool: "MongoDB Compass" },
                 { tool: "Netlify" },
                 { tool: "Visual Studio 2022" },
                 { tool: "Visual Studio Code" },
                 { tool: "Eclipse IDE" },
-                { tool: "PyCharm" },
-                { tool: "Postman" }
+
             ],
     },
     softSkills: [

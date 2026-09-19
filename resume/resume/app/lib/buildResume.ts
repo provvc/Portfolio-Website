@@ -115,15 +115,23 @@ export function buildResumeHTML() {
             <div class="text-xl font-semibold mb-2 mt-2">Technical Skills & Abilities</div>
             <div class="flex gap-12">
               <div class="flex flex-col gap-1">
-                <div class="text-md">Programming Languages</div>
-                <div>
-                  ${resumeInfo.technicalSkills.programming.map((l) => 
-                    `<div class="text-xs">${l.language}</div>`
-                  ).join("")}
+                <div class="text-md">Languages & Frameworks</div>
+                <div class="flex gap-10">
+                ${Array.from(
+                  { length: Math.ceil(resumeInfo.technicalSkills.skills.length / 10) },
+                  (_, chunkIndex) => `
+                    <div class="flex flex-col shrink-0 w-fit">
+                      ${resumeInfo.technicalSkills.skills
+                        .slice(chunkIndex * 10, chunkIndex * 10 + 10)
+                        .map((s) => `<div class="text-xs">${s.item}</div>`)
+                        .join("")}
+                    </div>
+                  `
+                ).join("")}
                 </div>
               </div>
               
-              <div class="flex flex-col gap-1">
+              <div class="flex flex-col gap-1 shrink-0 w-fit">
                 <div class="text-md">Developer Tools & Platforms</div>
                 <div>
                   ${resumeInfo.technicalSkills.tools.map((t) => 
@@ -133,10 +141,10 @@ export function buildResumeHTML() {
               </div>
 
               <div class="flex flex-col gap-1">
-                <div class="text-md">Frameworks</div>
+                <div class="text-md">Development Practices</div>
                 <div>
-                  ${resumeInfo.technicalSkills.frameworks.map((f) => 
-                    `<div class="text-xs">${f.framework}</div>`
+                  ${resumeInfo.technicalSkills.practices.map((f) => 
+                    `<div class="text-xs">${f.practice}</div>`
                   ).join("")}
                 </div>
               </div>
