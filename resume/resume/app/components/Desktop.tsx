@@ -12,6 +12,7 @@ import { ResumeModal } from "./ui/ResumeModal";
 import { ResumeDoc } from "./ui/ResumeDoc";
 import { ExportResumeButton } from "./ExportResumeButton";
 import { ShapesSketch } from "./ui/rotatingSquare";
+import { Folder } from "./ui/ProjectFolders";
 
 import "../globals.css";
 
@@ -231,62 +232,12 @@ export function Desktop() {
             </div>
           </div>
           {/* Body */}
-          <div className="bg-white flex justify-center items-center flex-row gap-2 px-2 mx-2 rounded-xs border mb-1 h-[400px]">
+          {/* <div className="bg-white flex justify-center items-center flex-row gap-2 px-2 mx-2 rounded-xs border mb-1 h-[400px]">
             Tab in progress...
-          </div>
-          {/* <div className="bg-white flex flex-row gap-10 px-2 mx-2 rounded-xs border mb-1 h-[400px]">
-
-            <div className="flex flex-col gap-4 items-center">
-              <div className="h-[75px] w-[101.25px] bg-blue-300 mt-2 rounded-lg z-1 hover:cursor-pointer shadow-[0_10px_14px_rgba(0,0,0,0.25)]">
-                <div className="h-[75px] w-[101.25px] bg-blue-300 relative rounded-md top-[2px] z-3"></div>
-                <div className="h-[63.75px] w-[93.75px] bg-white rounded relative top-[-68px] left-[4px] z-5 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.25)]"></div>
-                <div className="h-[75px] w-[101.25px] bg-blue-200 relative top-[-170%] rounded-lg z-6 shadow-[0_-3px_6px_-1px_rgba(0,0,0,0.12)]"></div>
-                <div className="relative top-[-290%] left-[15%] border-t-[7.5px] border-t-white border-l-[15px] border-l-transparent z-2"></div>
-              </div>
-              <div>WPM Typing</div>
-            </div>
-
-            <div className="flex flex-col gap-4 items-center">
-              <div className="h-[75px] w-[101.25px] bg-blue-300 mt-2 rounded-lg z-1 hover:cursor-pointer shadow-[0_10px_14px_rgba(0,0,0,0.25)]">
-                <div className="h-[75px] w-[101.25px] bg-blue-300 relative rounded-md top-[2px] z-3"></div>
-                <div className="h-[63.75px] w-[93.75px] bg-white rounded relative top-[-68px] left-[4px] z-5 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.25)]"></div>
-                <div className="h-[75px] w-[101.25px] bg-blue-200 relative top-[-170%] rounded-lg z-6 shadow-[0_-3px_6px_-1px_rgba(0,0,0,0.12)]"></div>
-                <div className="relative top-[-290%] left-[15%] border-t-[7.5px] border-t-white border-l-[15px] border-l-transparent z-2"></div>
-              </div>
-              <div>BookMark</div>
-            </div>
-
-            <div className="flex flex-col gap-4 items-center">
-              <div className="h-[75px] w-[101.25px] bg-blue-300 mt-2 rounded-lg z-1 hover:cursor-pointer shadow-[0_10px_14px_rgba(0,0,0,0.25)]">
-                <div className="h-[75px] w-[101.25px] bg-blue-300 relative rounded-md top-[2px] z-3"></div>
-                <div className="h-[63.75px] w-[93.75px] bg-white rounded relative top-[-68px] left-[4px] z-5 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.25)]"></div>
-                <div className="h-[75px] w-[101.25px] bg-blue-200 relative top-[-170%] rounded-lg z-6 shadow-[0_-3px_6px_-1px_rgba(0,0,0,0.12)]"></div>
-                <div className="relative top-[-290%] left-[15%] border-t-[7.5px] border-t-white border-l-[15px] border-l-transparent z-2"></div>
-              </div>
-              <div>NHL Stats</div>
-            </div>
-
-            <div className="flex flex-col gap-4 items-center">
-              <div className="h-[75px] w-[101.25px] bg-blue-300 mt-2 rounded-lg z-1 hover:cursor-pointer shadow-[0_10px_14px_rgba(0,0,0,0.25)]">
-                <div className="h-[75px] w-[101.25px] bg-blue-300 relative rounded-md top-[2px] z-3"></div>
-                <div className="h-[63.75px] w-[93.75px] bg-white rounded relative top-[-68px] left-[4px] z-5 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.25)]"></div>
-                <div className="h-[75px] w-[101.25px] bg-blue-200 relative top-[-170%] rounded-lg z-6 shadow-[0_-3px_6px_-1px_rgba(0,0,0,0.12)]"></div>
-                <div className="relative top-[-290%]  left-[15%] border-t-[7.5px] border-t-white border-l-[15px] border-l-transparent z-2"></div>
-              </div>
-              <div>Le Studio</div>
-            </div>
-            
-            <div className="flex flex-col gap-4 items-center">
-              <div className="h-[75px] w-[101.25px] bg-blue-300 mt-2 rounded-lg z-1 hover:cursor-pointer shadow-[0_10px_14px_rgba(0,0,0,0.25)]">
-                <div className="h-[75px] w-[101.25px] bg-blue-300 relative rounded-md top-[2px] z-3"></div>
-                <div className="h-[63.75px] w-[93.75px] bg-white rounded relative top-[-68px] left-[4px] z-5 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.25)]"></div>
-                <div className="h-[75px] w-[101.25px] bg-blue-200 relative top-[-170%] rounded-lg z-6 shadow-[0_-3px_6px_-1px_rgba(0,0,0,0.12)]"></div>
-                <div className="relative top-[-290%]  left-[15%] border-t-[7.5px] border-t-white border-l-[15px] border-l-transparent z-2"></div>
-              </div>
-              <div>Golf App</div>
-            </div>
-
           </div> */}
+          <div className="bg-white flex flex-row flex-wrap justify-between gap-5 px-2 mx-2 rounded-xs border mb-1 h-[400px]">
+            <Folder />
+          </div>
           
           {/* <div className="bg-white flex flex-col gap-2 px-2 mx-2 rounded-xs border mb-1 h-[400px]">
             <div className="flex flex-col">

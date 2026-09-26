@@ -23,10 +23,10 @@ export function ResumeDoc() {
 
           {/* EXPERIENCE */}
           <div className="section">
-            <div className="text-2xl mb-2 mt-4">Experience</div>
+            <div className="text-2xl mt-4">Experience</div>
 
             {resumeInfo.experience.map((job) => (
-              <div>
+              <div className="mt-6">
                 <div className="flex gap-1 font-extrabold">
                   <div className="text-sm mr-2">{job.company}</div>
                   <div className="text-sm">|</div>

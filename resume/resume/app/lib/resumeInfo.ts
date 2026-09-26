@@ -25,6 +25,19 @@ export const resumeInfo = {
                 { task: "Managed, assigned, and documented IT support tickets for timely resolutions and accurate traceability." },
             ]
         },
+        {
+            company: "HEALTH CANADA",
+            location: "Ottawa, ON",
+            title: "Storekeeper",
+            type: "Casual Employment",
+            address: "251 Sir Frederick Banting Driveway, Ottawa, ON K1A 0K9",
+            dates: "August 2026 - December 2026",
+            description: [
+                { task: "Received, managed, distributed laboratory and office equipment for Health Canada buildings within the Tunney's Pasture complex." },
+                { task: "Handled and transported dangerous goods to doctors and laboratory technicians within the Sir Frederick Banting building." },
+                { task: "Coordinated and resolved missing or misplaced packages with the package Sender and or Carrier." },
+            ]
+        }
     ],
     education: [
         {

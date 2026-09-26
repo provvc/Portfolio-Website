@@ -28,10 +28,10 @@ export function buildResumeHTML() {
 
     <!-- EXPERIENCE -->
     <div class="section">
-      <div class="text-xl font-semibold mb-2 mt-4">Experience</div>
+      <div class="text-xl font-semibold mt-4">Experience</div>
 
       ${resumeInfo.experience.map((job) => `
-        <div>
+        <div class="mt-6">
           <div class="flex gap-1 font-extrabold">
             <div class="text-xs mr-2">${job.company}</div>
             <div class="text-xs">|</div>
